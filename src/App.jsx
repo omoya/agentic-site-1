@@ -47,9 +47,9 @@ function App() {
                           {book.genre}
                         </p>
                         <p className="text-sm text-gray-700 mb-2 truncate">
-                          {book.description.length > 100
+                          {typeof book.description === "string" && book.description.length > 100
                             ? `${book.description.substring(0, 100)}...`
-                            : book.description}
+                            : book.description || "No description available."}
                         </p>
                         <Link
                           to={`/book/${index}`}
