@@ -15,6 +15,7 @@ test-results/
 
 # Logs
 *.log
+error-log.txt
 
 # System files
 .DS_Store
