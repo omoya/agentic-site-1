@@ -38,6 +38,19 @@
 - **Proactivity**: Suggest improvements and best practices when relevant.
 
 ## Version Control
+
 - **Commit Frequency**: Commit changes only after completing a feature or functionality satisfactorily.
 - **Commit Messages**: Use clear and descriptive commit messages summarizing the changes.
 - **Pushing to Repository**: Wait for explicit instructions to push changes to the remote repository.
+
+# Agent Configuration
+
+## Instructions for Dependency Management
+
+1. **Adding Dependencies**: Each time a new dependency is added to `package.json`, the agent should propose running `npm install` to ensure the dependency is installed.
+
+2. **Removing Unused Dependencies**: If changes in the codebase make a dependency unused, the agent should propose running `npm uninstall <dependency>` to remove it from the project.
+
+## Additional Notes
+
+- On Windows, the `&&` operator may not be supported in some environments. Use separate commands instead, or ensure the environment supports `&&` before using it.

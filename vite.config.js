@@ -1,8 +1,24 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import fs from "fs";
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  base: '/agentic-site-1/', // Set the base path for GitHub Pages
-})
+// Clear the error log file at the start of each run
+const errorLogPath = "./error-log.txt";
+fs.writeFileSync(errorLogPath, "", "utf8");
+
+export default {
+  plugins: [
+    {
+      name: "error-logger",
+      configureServer(server) {
+        server.middlewares.use((err, req, res, next) => {
+          if (err) {
+            const errorMessage = `${new Date().toISOString()} - ${
+              err.message
+            }\n`;
+            fs.appendFileSync(errorLogPath, errorMessage, "utf8");
+          }
+          next(err);
+        });
+      },
+    },
+  ],
+};
