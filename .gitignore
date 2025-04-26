@@ -1,0 +1,21 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Test results
+test-results/
+
+# Environment variables
+.env
+
+# Vite cache
+.vite
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db

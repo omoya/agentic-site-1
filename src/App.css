@@ -1,0 +1,35 @@
+.book-catalog {
+  padding: 2rem;
+  text-align: left;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.book {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.book h2 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+}
+
+.book p {
+  margin: 0.25rem 0;
+  color: #555;
+}
