@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { fetchBooks } from './mockData';
+import React, { useEffect, useState } from "react";
+import { fetchBooks } from "./mockData";
 
 function App() {
   const [books, setBooks] = useState([]);
